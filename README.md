@@ -21,3 +21,6 @@
 
 ## A VOIR
 	- objdump -line-numbers --source --x86-asm-syntax=intel APP
+
+## A FAIRE
+	- modifier ft_bzero - Add prolog + epilog
