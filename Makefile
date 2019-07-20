@@ -34,7 +34,8 @@ SRC_PATH	=	src
 
 OBJ_PATH	=	obj
 
-SRC_NAME	=	ft_bzero.s ft_strcat.s
+SRC_NAME	=	ft_bzero.s ft_strcat.s \
+				ft_isalpha.s
 
 OBJ_NAME	=	$(SRC_NAME:.s=.o)
 
