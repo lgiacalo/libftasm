@@ -19,7 +19,7 @@ SERVER		= tests
 CC			= gcc
 CFLAGS		= -Wall -Wextra -Werror
 CPPFLAGS	= -I ../include
-OPT			=
+OPT			= -g
 
 COLOR		= \033[31m
 FINCOLOR	= \033[0m

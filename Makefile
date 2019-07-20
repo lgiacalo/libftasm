@@ -16,15 +16,15 @@ NAME		=	libfts.a
 
 
 CC			=	nasm
-CFLAGS		=	-f macho64
+CFLAGS		=	-f macho64 #--prefix _
 CPPFLAGS	=	-Iinclude
 LINK		=	ar rc -lc
-OPT			=	
+OPT			=
 
 COLOR		=	\033[31m
 FINCOLOR	=	\033[0m
 
-SPY			=	@
+SPY			=
 
 
 ################################################################################
@@ -34,7 +34,7 @@ SRC_PATH	=	src
 
 OBJ_PATH	=	obj
 
-SRC_NAME	=	bzero.s	
+SRC_NAME	=	ft_bzero.s ft_strcat.s
 
 OBJ_NAME	=	$(SRC_NAME:.s=.o)
 
@@ -56,7 +56,7 @@ endif
 ifeq ($(option), opti)
 	OPT += -O3
 endif
-	
+
 ################################################################################
 
 
@@ -65,16 +65,16 @@ all: $(NAME)
 	$(SPY)echo "$(COLOR)$(NAME)\t\t\t[OK]$(FINCOLOR)"
 
 
-$(OBJ_PATH): 
-	$(SPY)mkdir $(OBJ_PATH) 2> /dev/null || true 
+$(OBJ_PATH):
+	$(SPY)mkdir $(OBJ_PATH) 2> /dev/null || true
 #	$(SPY)mkdir -p $(OBJ_PATH)
 
-$(OBJ_PATH)/%.o: $(SRC_PATH)/%.s 
-	$(SPY)$(CC) $(CFLAGS) $(CPPFLAGS) $(OPT) $< -o $@ 
+$(OBJ_PATH)/%.o: $(SRC_PATH)/%.s
+	$(SPY)$(CC) $(CFLAGS) $(CPPFLAGS) $(OPT) $< -o $@
 
 
 $(NAME): $(OBJ_PATH) $(OBJ)
-	$(SPY)$(LINK) $(NAME) $(OBJ)
+	$(SPY)$(LINK) $(OPT) $(NAME) $(OBJ)
 #	$(SPY)$(CC) -o $(NAME) $(OBJ)
 
 
@@ -86,7 +86,7 @@ clean:
 
 fclean: clean
 	$(SPY)/bin/rm -rf $(NAME)
-	$(SPY)echo "$(COLOR)$(NAME)\t\t\tSuppression libft.a$(FINCOLOR)"
+	$(SPY)echo "$(COLOR)$(NAME)\t\t\tSuppression libfts.a$(FINCOLOR)"
 
 
 re: fclean all
