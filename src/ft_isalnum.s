@@ -15,5 +15,4 @@ call	_ft_isalpha
 cmp		rax, 1
 je		_leave
 call	_ft_isdigit
-cmp		rax, 1
-je		_leave
+jmp		_leave
