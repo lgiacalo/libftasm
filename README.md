@@ -8,7 +8,7 @@
 
 
 ## Settings
-	LLDB : 
+	LLDB :
 		.lldbinit:
 			- settings set target.x86-disassembly-flavor intel
 
@@ -25,3 +25,16 @@
 ## A FAIRE
 	- modifier ft_bzero - Add prolog + epilog
 	- search is* valeur de return* voir code function linux
+
+## Part 1
+
+	• bzero
+	• strcat
+	• isalpha
+	• isdigit
+	• isalnum
+	• isascii
+	• isprint
+	• toupper
+	• tolower
+	• puts (bien entendu, vous pouvez appeller le syscall write)
