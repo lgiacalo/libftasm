@@ -39,7 +39,7 @@
 	• tolower
 	• puts (bien entendu, vous pouvez appeller le syscall write)
 
-## Part 2
+## Part 2 -  Instruction Repeat String Operations
 
 	• strlen
 	• memset
@@ -51,4 +51,3 @@
 	- ft_isblank
 	- ft_islower
 	- ft_isupper
-	
