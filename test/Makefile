@@ -34,7 +34,7 @@ INC_PATH	= include
 OBJ_PATH	= obj
 
 
-SRC_SERVER		= main.c
+SRC_SERVER		= main.c test_balestra.c
 
 OBJ_SERVER		= $(SRC_SERVER:.c=.o)
 
@@ -66,7 +66,7 @@ endif
 
 ################################################################################
 
-all: $(SERVER)
+all: $(SERVER) balestra
 
 $(OBJ_PATH):
 	$(SPY)mkdir -p $(OBJ_PATH)
@@ -75,8 +75,12 @@ $(OBJ_PATH)/%.o: $(SRC_PATH)/%.c $(LIB) Makefile
 	$(SPY)$(CC) $(OPT) $(CFLAGS) $(CPPFLAGS) -Iinclude -c $< -o $@
 
 $(SERVER): $(LIB) $(OBJ_PATH) $(OBJ_S)
-	$(SPY)$(CC) $(OPT) $(CFLAGS) $(CPPFLAGS) -o $(SERVER) $(OBJ_S) $(LIB)
+	$(SPY)$(CC) $(OPT) $(CFLAGS) $(CPPFLAGS) -o $(SERVER) $(OBJ_PATH)/main.o $(LIB)
 	$(SPY)echo "$(COLOR)$(SERVER)\t\t\t[OK]$(FINCOLOR)"
+
+balestra: $(LIB) $(OBJ_PATH) $(OBJ_S)
+	$(SPY)$(CC) $(OPT) $(CFLAGS) $(CPPFLAGS) -o $(SERVER)_balestra $(OBJ_PATH)/test_balestra.o $(LIB) ../../ft_p/libft/libft.a
+	$(SPY)echo "$(COLOR)$(SERVER)_balestra\t\t\t[OK]$(FINCOLOR)"
 
 clean:
 	$(SPY)/bin/rm -rf $(OBJ_S)
@@ -84,7 +88,7 @@ clean:
 	$(SPY)echo "$(COLOR)$(SERVER)\t\t\tSuppression *.o$(FINCOLOR)"
 
 fclean: clean
-	$(SPY)/bin/rm -rf $(SERVER)
+	$(SPY)/bin/rm -rf $(SERVER) $(SERVER)_balestra
 	$(SPY)echo "$(COLOR)$(SERVER)\t\t\tSuppression $(SERVER)$(FINCOLOR)"
 
 re: fclean all

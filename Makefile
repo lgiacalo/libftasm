@@ -25,6 +25,7 @@ COLOR		=	\033[31m
 FINCOLOR	=	\033[0m
 
 SPY			=
+TEST			=	tests
 
 
 ################################################################################
@@ -81,6 +82,9 @@ $(NAME): $(OBJ_PATH) $(OBJ) $(INC)
 	$(SPY)$(LINK) $(OPT) $(NAME) $(OBJ)
 #	$(SPY)$(CC) -o $(NAME) $(OBJ)
 
+
+$(TEST):
+	make -C test/
 
 clean:
 	$(SPY)/bin/rm -rf $(OBJ)
