@@ -17,14 +17,14 @@ SERVER		= tests
 
 
 CC			= gcc
-CFLAGS		= #-Wall -Wextra -Werror
+CFLAGS		= -g #-Wall -Wextra -Werror
 CPPFLAGS	= -I ../include
-OPT			= -g
+OPT			=
 
 COLOR		= \033[31m
 FINCOLOR	= \033[0m
 
-SPY			= @
+SPY			= 
 
 
 ################################################################################

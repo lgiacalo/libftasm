@@ -15,25 +15,28 @@ int main(int argc, char **argv)
 	// // printf("ret = %d - ft_isdigit(%c)\n", ft_isdigit('z'), 'z');
 	//
 
+	//
+	// int			i;
+	// int			j;
+	// int			ret;
+	//
+	// if (argc == 3)
+	// {
+	// 	i = atoi(argv[1]);
+	// 	j = -9;
+	// 	while (j < 255)
+	// 	{
+	// 		ret = ft_isdigit(j);
+	// 		if (j % 10 == 0)
+	// 			printf("%d ", ret);
+	// 		else
+	// 			printf("%d", ret);
+	// 		j++;
+	// 	}
+	// }
 
-	int			i;
-	int			j;
-	int			ret;
+	ft_puts("Merde\n");
 
-	if (argc == 3)
-	{
-		i = atoi(argv[1]);
-		j = -9;
-		while (j < 255)
-		{
-			ret = ft_isdigit(j);
-			if (j % 10 == 0)
-				printf("%d ", ret);
-			else
-				printf("%d", ret);
-			j++;
-		}
-	}
 
 	return (0);
 }
