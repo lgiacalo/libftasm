@@ -37,7 +37,8 @@ INC_PATH	=	include
 
 SRC_NAME	=	ft_bzero.s ft_strcat.s \
 				ft_isalpha.s ft_isdigit.s ft_isalnum.s ft_isascii.s \
-				ft_isprint.s ft_isblank.s ft_islower.s ft_isupper.s
+				ft_isprint.s ft_isblank.s ft_islower.s ft_isupper.s \
+				ft_tolower.s ft_toupper.s
 
 OBJ_NAME	=	$(SRC_NAME:.s=.o)
 
