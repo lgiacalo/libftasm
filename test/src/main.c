@@ -1,22 +1,39 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "libfts.h"
 
 // gcc *.c libfts.a
 
-int main(void)
+int main(int argc, char **argv)
 {
-	char	str1[50] = "bonjour\0";
-	char	str2[] = " lena\0";
+	// char	str1[50] = "bonjour\0";
+	// char	str2[] = " lena\0";
+	//
+	//
+	// printf("ret = %d - ft_isdigit(%d)\n", ft_isdigit('0'), 0);
+	// printf("ret = %d - ft_isdigit(%d)\n", ft_isdigit('9'), 9);
+	// // printf("ret = %d - ft_isdigit(%c)\n", ft_isdigit('z'), 'z');
+	//
 
-	printf("Chaine : [%s][%s]\n", str1, str2);
 
-//	ft_bzero((void *)str, (size_t)8);
-	ft_strcat(NULL, str2);
-	printf("Chaine : [%s][%s]\n", str1, str2);
-	ft_strcat(str1, str2);
+	int			i;
+	int			j;
+	int			ret;
 
-	printf("Chaine : [%s][%s]\n", str1, str2);
-
+	if (argc == 3)
+	{
+		i = atoi(argv[1]);
+		j = -9;
+		while (j < 255)
+		{
+			ret = ft_isdigit(j);
+			if (j % 10 == 0)
+				printf("%d ", ret);
+			else
+				printf("%d", ret);
+			j++;
+		}
+	}
 
 	return (0);
 }

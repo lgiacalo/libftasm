@@ -24,3 +24,4 @@
 
 ## A FAIRE
 	- modifier ft_bzero - Add prolog + epilog
+	- search is* valeur de return* voir code function linux

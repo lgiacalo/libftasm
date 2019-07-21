@@ -17,7 +17,7 @@ SERVER		= tests
 
 
 CC			= gcc
-CFLAGS		= -Wall -Wextra -Werror
+CFLAGS		= #-Wall -Wextra -Werror
 CPPFLAGS	= -I ../include
 OPT			= -g
 

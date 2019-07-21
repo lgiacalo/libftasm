@@ -31,20 +31,22 @@ SPY			=
 
 
 SRC_PATH	=	src
-
 OBJ_PATH	=	obj
+INC_PATH	=	include
 
 SRC_NAME	=	ft_bzero.s ft_strcat.s \
-				ft_isalpha.s
+				ft_isalpha.s ft_isdigit.s
 
 OBJ_NAME	=	$(SRC_NAME:.s=.o)
 
+INC_PATH	=	libfts.h
 
 ################################################################################
 
 
 SRC	= $(addprefix $(SRC_PATH)/,$(SRC_NAME))
 OBJ	= $(addprefix $(OBJ_PATH)/,$(OBJ_NAME))
+INC	= $(addprefix $(INC_PATH)/,$(INC_NAME))
 
 ################################################################################
 
@@ -70,11 +72,11 @@ $(OBJ_PATH):
 	$(SPY)mkdir $(OBJ_PATH) 2> /dev/null || true
 #	$(SPY)mkdir -p $(OBJ_PATH)
 
-$(OBJ_PATH)/%.o: $(SRC_PATH)/%.s
+$(OBJ_PATH)/%.o: $(SRC_PATH)/%.s $(INC)
 	$(SPY)$(CC) $(CFLAGS) $(CPPFLAGS) $(OPT) $< -o $@
 
 
-$(NAME): $(OBJ_PATH) $(OBJ)
+$(NAME): $(OBJ_PATH) $(OBJ) $(INC)
 	$(SPY)$(LINK) $(OPT) $(NAME) $(OBJ)
 #	$(SPY)$(CC) -o $(NAME) $(OBJ)
 
