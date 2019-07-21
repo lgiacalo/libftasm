@@ -221,8 +221,8 @@ int check_strdup(int ret)
 void check_puts(void)
 {
 	printf("\n\nft_puts\n");
-   ft_puts("PUTS");
-   ft_puts(NULL);
+	   ft_puts("PUTS");
+	   ft_puts(NULL);
 	printf("(null) == OK\n");
 }
 
@@ -255,9 +255,9 @@ int main(void)
 	int ret = 0;
 	printf("Start testing :");
 	ret = is_to_something(ret);
-	// ret = check_strlen(ret);
+	ret = check_strlen(ret);
 	ret = check_bzero(ret);
-	// ret = check_memset(ret);
+	ret = check_memset(ret);
 	// ret = check_memalloc(ret);
 	check_puts();
 	// ret = check_strcat(ret);

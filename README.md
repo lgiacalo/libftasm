@@ -38,3 +38,17 @@
 	• toupper
 	• tolower
 	• puts (bien entendu, vous pouvez appeller le syscall write)
+
+## Part 2
+
+	• strlen
+	• memset
+	• memcpy
+	• strdup (bien entendu, vous pouvez appeller malloc)
+
+
+## BONUS
+	- ft_isblank
+	- ft_islower
+	- ft_isupper
+	
