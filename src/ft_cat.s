@@ -1,46 +1,43 @@
 global _ft_cat
-extern _ft_strlen
 
 %define	_read	0x2000003
 %define	_write	0x2000004
 
+%define	SIZE	64
 
 section .bss           ;Uninitialized data
-   buf: resb 64
-   .len: db $ - buf
+   buf: resb SIZE
 
 section .text
-
-_leave:
-	mov		rsp, rbp
-	ret
 
 _ft_cat:
 	push	rbp
 	mov		rbp, rsp
 	sub		rsp, 16
 
-	mov		[rsp + 0xc], rdi
-
+	mov		dword [rsp + 0xc], edi
 
 _loop:
-
 	mov		rax, _read
-	mov		rdi, [rsp + 0xc]
+	mov		edi, dword [rsp + 0xc]
 	lea		rsi, [rel buf]
-	mov		rdx, buf.len
+	mov		rdx, SIZE
 	syscall
+	jc		_leave
 
 	cmp		rax, 0
 	je		_leave
-	; cmp		rax, -1
-	; je		_leave
-
 
 	mov     rdx, rax
 	mov     rax, _write
 	mov     rdi, 1
 	lea		rsi, [rel buf]
 	syscall
+	jc		_leave
 
 	jmp		_loop
+
+_leave:
+	mov		rsp, rbp
+	pop		rbp
+	ret
