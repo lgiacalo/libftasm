@@ -8,11 +8,11 @@
 int main(int argc, char **argv)
 {
 
-	int fd = 0;
+	char	s1[]="La maison est bleu 8";
+	char	*tmp;
 
-	printf("\n\nft_cat\nHello World !");
-	fd = open("hello.world", O_RDONLY);
-	ft_cat(fd);
+	tmp = ft_memchr(s1, argv[1][0], 21);
+	printf("retour strchr : [%s][%p] -- [%p]\n", tmp, tmp, s1);
 
 	return (0);
 }

@@ -57,5 +57,6 @@ int				ft_isblank(int c);
 int				ft_islower(int c);
 int				ft_isupper(int c);
 
+void			*ft_memchr(const void *s, int c, size_t n);
 
 #endif
