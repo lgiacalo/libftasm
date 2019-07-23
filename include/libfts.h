@@ -44,6 +44,12 @@ void			*ft_memcpy(void *dst, const void *src, size_t n);
 char			*ft_strdup(const char *s1);
 
 /*
+**	Part 3 - ft_cat
+*/
+
+void			ft_cat(int fd);
+
+/*
 **	Fonctions supplementaires
 */
 

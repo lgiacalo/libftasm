@@ -13,7 +13,6 @@ _ft_strlen:
 
 	mov		rcx, -1
 	xor		al, al
-	cld					;The DF flag is set to 0. The CF, OF, ZF, SF, AF, and PF flags are unaffected.
 
 	repne	scasb
 

@@ -39,7 +39,7 @@ SRC_NAME	=	ft_bzero.s ft_strcat.s \
 				ft_isalpha.s ft_isdigit.s ft_isalnum.s ft_isascii.s \
 				ft_isprint.s ft_isblank.s ft_islower.s ft_isupper.s \
 				ft_tolower.s ft_toupper.s ft_puts.s ft_strlen.s \
-				ft_memset.s ft_memcpy.s ft_strdup.s
+				ft_memset.s ft_memcpy.s ft_strdup.s ft_cat.s
 
 OBJ_NAME	=	$(SRC_NAME:.s=.o)
 

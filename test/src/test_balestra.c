@@ -232,7 +232,7 @@ void call_cat(void)
 	int fd = 0;
 	printf("\n\nft_cat\nHello World !");
 	fd = open("hello.world", O_RDONLY);
-//    ft_cat(fd);
+	ft_cat(fd);
  }
 
 int check_power(int ret)
@@ -264,7 +264,7 @@ int main(void)
 	ret = check_strcat(ret);
 	ret = check_memcpy(ret);
 	ret = check_strdup(ret);
-	// call_cat();
+	call_cat();
 	// check_power(ret);
 	// printf("\n\nfailed == %i\n", ret);
 	return (ret > 0 ? 2 : 0);

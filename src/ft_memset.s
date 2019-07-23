@@ -13,7 +13,7 @@ _ft_memset:
 
 	mov		rcx, rdx
 	mov		rax, rsi
-	cld
+	cld					; pas utile car toujours a 0 en rentrant dans la fonction, p15
 	rep		stosb
 
 	pop		rax
