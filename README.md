@@ -46,6 +46,15 @@
 	• memcpy
 	• strdup (bien entendu, vous pouvez appeller malloc)
 
+## Part 3
+
+Pour finir, vous devez coder une fonction ft_cat qui prendra un file descriptor
+(par exemple 0...) en paramètre et qui auras le même comportement que la commande
+cat, elle retournera void.
+
+Attention le changement de contexte entre l’user-space et le
+kernel-space coûte cher en terme de performances donc vous serez
+pénalisés si vous en abusez.
 
 ## BONUS
 	- ft_isblank

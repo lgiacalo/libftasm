@@ -195,12 +195,13 @@ int check_strdup(int ret)
 	char *dest = NULL;
 	int i = 3;
 	int j = 0;
-	char src[i];
+	char src[i + 1];
 	while (j < i)
 	{
 		src[j] = 'a';
 		j++;
 	}
+	src[j] = '\0';
 	printf("\n\nft_strdup\n");
 	dest = ft_strdup(src);
 	j = 0;
@@ -260,9 +261,9 @@ int main(void)
 	ret = check_memset(ret);
 	// ret = check_memalloc(ret);
 	check_puts();
-	// ret = check_strcat(ret);
-	// ret = check_memcpy(ret);
-	// ret = check_strdup(ret);
+	ret = check_strcat(ret);
+	ret = check_memcpy(ret);
+	ret = check_strdup(ret);
 	// call_cat();
 	// check_power(ret);
 	// printf("\n\nfailed == %i\n", ret);
