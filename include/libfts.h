@@ -40,6 +40,7 @@ int				ft_puts(const char *s);
 
 int				ft_strlen(const char *s);
 void			*ft_memset(void *b, int c, size_t len);
+void			*ft_memcpy(void *dst, const void *src, size_t n);
 
 /*
 **	Fonctions supplementaires
