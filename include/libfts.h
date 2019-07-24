@@ -59,4 +59,6 @@ int				ft_isupper(int c);
 
 void			*ft_memchr(const void *s, int c, size_t n);
 
+void			ft_putchar(char c);
+
 #endif
