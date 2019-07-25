@@ -62,8 +62,8 @@ pénalisés si vous en abusez.
 	- ft_isupper
 
 	- ft_putchar
-	- ft_memchr
-	- ft_memcmp
+T	- ft_memchr
+T	- ft_memcmp
 
 
 #########################################################

@@ -7,11 +7,10 @@ _leave:
 	ret
 
 _zero:
-	cmp		al, 0
+	cmp		al, 0x0
 	je		_leave
 	xor		rax, rax
 	jmp		_leave
-
 
 _ft_memchr:
 	push	rbp
@@ -25,7 +24,7 @@ _ft_memchr:
 	dec		rdi
 	mov		rax, rdi
 
-	cmp		rcx, 0
+	cmp		rcx, 0x0
 	je		_zero
 
 	jmp		_leave
