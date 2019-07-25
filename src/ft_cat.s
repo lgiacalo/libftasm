@@ -20,7 +20,7 @@ _ft_cat:
 _loop:
 	mov		rax, _read
 	mov		edi, dword [rsp + 0xc]
-	lea		rsi, [rel buf]
+	lea		rsi, [rel buf]				; mov  rsi, buf
 	mov		rdx, SIZE
 	syscall
 	jc		_leave
@@ -31,7 +31,7 @@ _loop:
 	mov     rdx, rax
 	mov     rax, _write
 	mov     rdi, 1
-	lea		rsi, [rel buf]
+	lea		rsi, [rel buf]				; mov  rsi, buf
 	syscall
 	jc		_leave
 
