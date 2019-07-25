@@ -63,10 +63,10 @@ pénalisés si vous en abusez.
 
 	- ft_putchar
 	- ft_memchr
+	- ft_memcmp
 
 
 #########################################################
-	- ft_memcmp
 
 	- ft_strcpy
 	- ft_strcmp
