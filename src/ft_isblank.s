@@ -5,8 +5,10 @@ section .text
 _ft_isblank:
 	push	rbp
 	mov		rbp, rsp
+
 	cmp		rdi, 32
 	je		_istrue
+
 	cmp		rdi, 9
 	je		_istrue
 	jmp		_isfalse
