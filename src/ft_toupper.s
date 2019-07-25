@@ -8,17 +8,18 @@ _leave:
 	ret
 
 _istrue:
-	sub		rdi, 32
-	mov		rax, rdi
+	pop		rax
+	sub		rax, 32
 	jmp		_leave
 
 _isfalse:
-	mov		rax, rdi
+	pop		rax
 	jmp		_leave
 
 _ft_toupper:
 	push	rbp
 	mov		rbp, rsp
+	push	rdi
 
 	call	_ft_islower
 	cmp		rax, 0
