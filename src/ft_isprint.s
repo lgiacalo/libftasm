@@ -5,8 +5,10 @@ section .text
 _ft_isprint:
 	push	rbp
 	mov		rbp, rsp
+
 	cmp		rdi, 32
 	jl		_isfalse
+
 	cmp		rdi, 127
 	jl		_istrue
 	jmp		_isfalse
