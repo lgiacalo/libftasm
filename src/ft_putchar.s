@@ -13,8 +13,9 @@ _ft_putchar:
 	sub		rsp, 16
 
 
-	mov		[rsp], rdi
-	lea		rsi, [rsp]
+	mov		byte [rsp], dil
+	mov		rsi, rsp
+	; lea		rsi, [rsp]
 
 	mov     rax, 0x2000004
 	mov     rdi, 1			; fd

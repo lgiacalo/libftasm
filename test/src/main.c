@@ -19,6 +19,12 @@ void	swap(int *a, int *b)
 int main(int argc, char **argv)
 {
 
+	ft_puts(NULL);
+	char str[] = "hello world !";
+	for(int i = 0; i < 13; i++)
+		ft_putchar(str[i]);
+
+
 	int	i, j;
 	int	*k, *l;
 
