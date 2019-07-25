@@ -5,8 +5,10 @@ section .text
 _ft_islower:
 	push	rbp
 	mov		rbp, rsp
+
 	cmp		rdi, 97
 	jl		_isfalse
+
 	cmp		rdi, 123
 	jl		_istrue
 	jmp		_isfalse
