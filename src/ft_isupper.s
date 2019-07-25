@@ -5,8 +5,10 @@ section .text
 _ft_isupper:
 	push	rbp
 	mov		rbp, rsp
+
 	cmp		rdi, 65
 	jl		_isfalse
+
 	cmp		rdi, 91
 	jl		_istrue
 	jmp		_isfalse
