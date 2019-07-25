@@ -13,7 +13,6 @@ _zero:
 	jmp		_leave
 
 
-; strchr - calcul sur rcx, le compteur et pas avec l'adresse de la string
 _ft_memchr:
 	push	rbp
 	mov		rbp, rsp

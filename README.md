@@ -61,9 +61,12 @@ pénalisés si vous en abusez.
 	- ft_islower
 	- ft_isupper
 
-	- ft_memcmp
 	- ft_putchar
 	- ft_memchr
+
+
+#########################################################
+	- ft_memcmp
 
 	- ft_strcpy
 	- ft_strcmp
