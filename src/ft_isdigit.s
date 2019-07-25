@@ -5,8 +5,10 @@ section .text
 _ft_isdigit:
 	push	rbp
 	mov		rbp, rsp
+
 	cmp		rdi, 48
 	jl		_isfalse
+
 	cmp		rdi, 58
 	jl		_istrue
 	jmp		_isfalse
