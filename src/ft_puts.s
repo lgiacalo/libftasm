@@ -2,8 +2,8 @@ global _ft_puts
 extern _ft_strlen
 
 section .data
-EOL:	db 10, 0
-NULL:	db "(null)", 10, 0
+EOL:	db 10
+NULL:	db "(null)", 10
 
 section .text
 
@@ -15,7 +15,7 @@ _eol:
 	mov     rax, 0x2000004
 	mov     rdi, 1
 	mov     rsi, EOL
-	mov     rdx, 2
+	mov     rdx, 1
 	syscall
 	jmp		_leave
 
@@ -23,7 +23,7 @@ _null:
 	mov     rax, 0x2000004
 	mov     rdi, 1
 	mov     rsi, NULL
-	mov     rdx, 8
+	mov     rdx, 7
 	syscall
 	jmp		_leave
 
