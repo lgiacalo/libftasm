@@ -57,17 +57,12 @@ kernel-space coûte cher en terme de performances donc vous serez
 pénalisés si vous en abusez.
 
 ## BONUS
-	- ft_isblank
-	- ft_islower
-	- ft_isupper
+OK	- ft_isblank
+OK	- ft_islower
+OK	- ft_isupper
 
-	- ft_putchar
-T	- ft_memchr
-T	- ft_memcmp
+OK	- ft_putchar
+OK	- ft_memchr
+OK	- ft_memcmp
 
-
-#########################################################
-
-	- ft_strcpy
-	- ft_strcmp
-	- ft_swap ---> xor
+OK	- ft_swap
