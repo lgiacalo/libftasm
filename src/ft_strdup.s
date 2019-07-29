@@ -13,6 +13,7 @@ _ft_strdup:
 	push	rdi
 
 	call	_ft_strlen
+	inc		rax
 
 	push	rax
 	mov		rdi, rax
