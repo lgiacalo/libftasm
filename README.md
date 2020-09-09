@@ -74,4 +74,7 @@ Pour la partie bonus vous êtes libres d'ajouter d'autres fonctions de votre cho
 		- set disassembly-flavor intel
 		- show disassembly-flavor
 
+## Info
+	- les codes des syscall sont au /usr/include/sys/syscall.h (n'oubliez pas de rajouter 0x200000 devant) o/
+	- objdump -line-numbers --source --x86-asm-syntax=intel APP
 
